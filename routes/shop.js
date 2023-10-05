@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
+
+const addProductsController = require("../controllers/shopPage");
 
 const routes = express.Router();
 
-routes.get('/',(req, res, next)=>{
-    res.send('<h1>This is home page</h1>');
-});
+routes.get("/", addProductsController.getAddProductsPage);
 
 module.exports = routes;
